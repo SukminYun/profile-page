@@ -1,40 +1,30 @@
 import './App.css';
+import './index.css';
 
-import { useState } from 'react';
-
-import viteLogo from '/vite.svg';
-
-import reactLogo from './assets/react.svg';
+import profile from './assets/profile.jpg';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button
-          onClick={() => {
-            setCount(count + 1);
+      <div className="wrapper">
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
           }}
         >
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+          <img src={profile} className="profileImage" />
+          <div style={{ fontSize: '50px' }}>윤석민</div>
+        </div>
+        <ul>
+          <li>컴퓨터공학부 23학번 04년생</li>
+          <li>MBTI는 ISFJ</li>
+          <li>개발은 처음입니다!!</li>
+          <li>취미는 농구 게임 입니다</li>
+          <li>TMI) 오른쪽은 거제도 갔을 때 찍은 사진</li>
+        </ul>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   );
 }
